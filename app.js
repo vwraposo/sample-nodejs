@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
   console.log('>>> QUERYSTRING', req.query)
-  if (req.query === 1) {
+  if (req.query?.v === 1) {
     throw new Error('ERROU!')
   }
   res.send('Hello World!')
